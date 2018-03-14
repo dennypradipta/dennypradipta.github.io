@@ -138,9 +138,10 @@ body {
 
 /* Typography */
 .font-montserrat {
-  font-family: "Montserrat", sans-serif; }
-.font-opensans {
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 2px; }
+.font-lato {
+  font-family: "Lato", sans-serif; }
 
 .line-height-12 {
   line-height: 1.25; }
@@ -187,23 +188,19 @@ body {
   bottom: 0; }
 
 /* Colors */
-.bg-darkblue {
-  background-color: #0d47a1; }
-.bg-blue {
-  background-color: #1e88e5; }
+.bg-cream {
+  background-color: #EFE0BF; }
 .bg-white {
   background-color: #eeeeee; }
 .bg-black {
-  background-color: #222222; }
+  background-color: #333333; }
 
 .fg-darkblue {
   color: #0d47a1; }
-.fg-blue {
-  color: #1e88e5; }
 .fg-white {
   color: #eeeeee; }
 .fg-black {
-  color: #222222; }
+  color: #333333; }
 
 /* Animation */
 @keyframes floating {
@@ -221,21 +218,5 @@ body {
   cursor: pointer; }
 
 /* Div Specifics */
-.bg-welcome {
-  position: relative;
-  height: 100vh;
-  background-color: black;
-  overflow-x: hidden; }
-  .bg-welcome:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-image: -webkit-linear-gradient(top left, #0d47a1, #eee);
-    background-image: -o-linear-gradient(top left, #0d47a1, #eee);
-    background-image: linear-gradient(to bottom right, #0d47a1, #eee);
-    opacity: .6; }
 
 /*# sourceMappingURL=style.css.map */

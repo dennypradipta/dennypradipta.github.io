@@ -5,16 +5,16 @@
 
 // Variables
 // Colors
-$color-black: #222222;
+$color-black: #333333;
 $color-white: #eeeeee;
-$color-blue : #1e88e5;
+$color-cream: #EFE0BF;
 $color-darkblue: #0d47a1;
 // Fonts
 $base-font-size: 1em;
 $base-line-height: 1.5;
 $header-line-height: 1.25;
 $font-montserrat: 'Montserrat', sans-serif;
-$font-opensans: 'Open Sans', sans-serif;
+$font-lato: 'Lato', sans-serif;
 // Sizes for Paddings and Margins
 $size-xs : 8px;
 $size-sm : 16px;
@@ -261,9 +261,10 @@ body {
 .font {
     &-montserrat {
         font-family: $font-montserrat;
+        letter-spacing: 2px;
     }
-    &-opensans {
-        font-family: $font-opensans;
+    &-lato {
+        font-family: $font-lato;
     }
 }
 
@@ -335,11 +336,8 @@ body {
 
 /* Colors */
 .bg {
-    &-darkblue {
-        background-color: $color-darkblue;
-    }
-    &-blue {
-        background-color: $color-blue;
+    &-cream {
+        background-color: $color-cream;
     }
     &-white {
         background-color: $color-white;
@@ -352,9 +350,6 @@ body {
 .fg {
     &-darkblue {
         color: $color-darkblue;
-    }
-    &-blue {
-        color: $color-blue;
     }
     &-white {
         color: $color-white;
@@ -387,22 +382,3 @@ body {
 }
 
 /* Div Specifics */
-.bg-welcome{
-    position: relative;
-	height: 100vh;
-	background-color: black;
-    overflow-x: hidden;
-    
-    &:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background-image: -webkit-linear-gradient(top left, #0d47a1, #eee);
-        background-image: -o-linear-gradient(top left, #0d47a1, #eee);
-        background-image: linear-gradient(to bottom right, #0d47a1, #eee);
-        opacity: .6; 
-    }
-}
