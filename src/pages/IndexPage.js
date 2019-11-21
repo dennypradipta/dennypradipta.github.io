@@ -8,6 +8,7 @@ import PortfolioSection from 'components/PortfolioSection/PortfolioSection';
 
 
 import API from "../components/API/API";
+import DefaultNavbar from 'components/DefaultNavbar/DefaultNavbar';
 
 
 class IndexPage extends Component {
@@ -48,13 +49,14 @@ class IndexPage extends Component {
     render() {
         return (
             <>
-                <Heading size={2} className="has-text-left global-padding global-heading">About</Heading>
+                <DefaultNavbar />
+                <Heading id="about" size={2} className="has-text-left global-padding global-heading">About</Heading>
                 <AboutSection about={this.state.about} isFetching={this.state.isFetching} />
-                <Heading size={2} className="has-text-left global-padding global-heading">Educations</Heading>
+                <Heading id="educations" size={2} className="has-text-left global-padding global-heading">Educations</Heading>
                 <EducationSection educations={this.state.educations} isFetching={this.state.isFetching} />
-                <Heading size={2} className="has-text-left global-padding global-heading">Employments</Heading>
+                <Heading id="employments" size={2} className="has-text-left global-padding global-heading">Employments</Heading>
                 <EmploymentSection employments={this.state.employments} isFetching={this.state.isFetching} />
-                <Heading size={2} className="has-text-left global-padding global-heading">Portfolio</Heading>
+                <Heading id="portfolios" size={2} className="has-text-left global-padding global-heading">Portfolios</Heading>
                 <PortfolioSection projects={this.state.projects} isFetching={this.state.isFetching} />
             </>
         );

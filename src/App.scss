@@ -2,6 +2,10 @@ $primary: #222983;
 
 @import "~react-bulma-components/src/index.sass";
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -9,15 +13,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
-}
-
-.App {
-  text-align: center;
 }
 
 .App-logo {
@@ -33,12 +34,19 @@ code {
 }
 
 .devicon {
-  margin: 1rem 0 1rem 0;
   padding: 0 4px 0 4px;
   width: 40px;
   height: 40px;
   max-width: 40px;
   max-height: 40px;
+}
+
+.devicon:nth-child(1) {
+  padding: 0 4px 0 0;
+}
+
+.devicon:nth-last-child(1) {
+  padding: 0 0 0 4px;
 }
 
 .global-padding {

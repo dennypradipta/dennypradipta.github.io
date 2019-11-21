@@ -13,15 +13,24 @@ const EmploymentSection = (props) => {
         <Columns gapless>
             {
                 !props.isFetching ?
-                    props.employments.map(employment => {
+                    props.employments.map((employment, index, array) => {
                         return (
                             <Columns.Column size={12} key={employment.sys.id}>
                                 <Content className="global-padding">
-                                    <Heading size={4} className="has-text-left">{employment.fields.workplace}</Heading>
+                                    <Heading size={4} className="has-text-left">
+                                        {
+                                            index !== 0 ?
+                                                employment.fields.workplace !== array[index-1].fields.workplace ?
+                                                    employment.fields.workplace :
+                                                    ""
+                                                : 
+                                                employment.fields.workplace
+                                        }
+                                    </Heading>
                                     <Heading subtitle size={6} className="has-text-left has-text-grey">
                                         {employment.fields.jobPosition}
                                         <br />
-                                        <span className="has-text-weight-normal has-text-black">{`${formatDate(employment.fields.startDate)} - ${formatDate(employment.fields.endDate)}`}</span>  
+                                        <span className="has-text-weight-normal has-text-black">{`${formatDate(employment.fields.startDate)} - ${formatDate(employment.fields.endDate)}`}</span>
                                     </Heading>
                                 </Content>
                             </Columns.Column>
