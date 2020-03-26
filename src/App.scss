@@ -1,9 +1,11 @@
-$primary: #222983;
+// $primary: #efefef;
+// $secondary: #fdeaa0;
 
 @import "~react-bulma-components/src/index.sass";
 
 html {
   scroll-behavior: smooth;
+  background-color: #192b3d;
 }
 
 body {
@@ -14,6 +16,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
+  color: #fff;
 }
 
 code {
@@ -30,7 +33,7 @@ code {
 }
 
 .App-link {
-  color: #09d3ac;
+  color: #fdeaa0;
 }
 
 .devicon {
@@ -54,7 +57,7 @@ code {
 }
 
 .global-heading {
-  border-bottom: 2px solid #09d3ac;
+  border-bottom: 2px solid #fdeaa0;
 }
 
 .content figure {
