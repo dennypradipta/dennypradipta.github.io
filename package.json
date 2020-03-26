@@ -20,8 +20,8 @@
   "scripts": {
     "predeploy": "npm run format && npm run check-format && npm run build",
     "deploy": "gh-pages -b master -d build",
-    "check-format": "prettier --check \"**/*.{js,jsx}\"",
-    "format": "prettier --write \"**/*.{js,jsx}\"",
+    "check-format": "prettier --check \"src/**/*.{js,jsx}\"",
+    "format": "prettier --write \"src/**/*.{js,jsx}\"",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
