@@ -1,14 +1,21 @@
-import React, { Component } from "react";
+import React, { lazy, Suspense, Component } from "react";
 import moment from "moment-timezone";
 import Heading from "react-bulma-components/lib/components/heading";
 
-import AboutSection from "components/AboutSection/AboutSection";
-import EducationSection from "components/EducationSection/EducationSection";
-import EmploymentSection from "components/EmploymentSection/EmploymentSection";
-import PortfolioSection from "components/PortfolioSection/PortfolioSection";
-
 import API from "../components/API/API";
 import DefaultNavbar from "components/DefaultNavbar/DefaultNavbar";
+import BigSpinner from "../components/BigSpinner/BigSpinner";
+
+const AboutSection = lazy(() => import("components/AboutSection/AboutSection"));
+const EducationSection = lazy(() =>
+  import("components/EducationSection/EducationSection")
+);
+const EmploymentSection = lazy(() =>
+  import("components/EmploymentSection/EmploymentSection")
+);
+const PortfolioSection = lazy(() =>
+  import("components/PortfolioSection/PortfolioSection")
+);
 
 class IndexPage extends Component {
   constructor(props) {
@@ -46,8 +53,12 @@ class IndexPage extends Component {
   }
 
   render() {
+    if (this.state.isFetching) {
+      return <BigSpinner />;
+    }
+
     return (
-      <>
+      <Suspense fallback={<BigSpinner />}>
         <DefaultNavbar />
         <Heading
           id="about"
@@ -96,7 +107,7 @@ class IndexPage extends Component {
         <p style={{ textAlign: "center", margin: "0 auto", padding: "1rem 0" }}>
           Copyright (C) Denny Pradipta {moment().format("YYYY")}
         </p>
-      </>
+      </Suspense>
     );
   }
 }
