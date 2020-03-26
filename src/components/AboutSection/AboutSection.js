@@ -6,13 +6,13 @@ import Heading from "react-bulma-components/lib/components/heading";
 import AboutSectionImage from "../AboutSectionImage/AboutSectionImage";
 import TechnologyIcon from "../TechnologyIcon/TechnologyIcon";
 
-const AboutSection = props => {
+const AboutSection = (props) => {
   return (
     <Columns gapless>
       <Columns.Column className="global-padding">
         <Content>
           {!props.isFetching
-            ? props.about.map(data => {
+            ? props.about.map((data) => {
                 return (
                   <div className="global-padding" key={data.sys.id}>
                     <AboutSectionImage data={data.fields.photo.sys.id} />
@@ -32,7 +32,7 @@ const AboutSection = props => {
                     </Heading>
                     <Heading subtitle>
                       <Columns className="global-padding">
-                        {data.fields.skills.map(skill => {
+                        {data.fields.skills.map((skill) => {
                           return (
                             <TechnologyIcon technology={skill} key={skill} />
                           );

@@ -17,7 +17,7 @@ class IndexPage extends Component {
       isFetching: true,
       about: {},
       employments: [],
-      projects: []
+      projects: [],
     };
   }
 
@@ -26,21 +26,21 @@ class IndexPage extends Component {
       API.getAllEntryByType("about"),
       API.getAllEntryByType("educations", true),
       API.getAllEntryByType("employments", true),
-      API.getAllEntryByType("projects", true)
+      API.getAllEntryByType("projects", true),
     ])
-      .then(result => {
+      .then((result) => {
         this.setState({
           isFetching: false,
           about: result[0].items,
           educations: result[1].items,
           employments: result[2].items,
-          projects: result[3].items
+          projects: result[3].items,
         });
       })
-      .catch(error => {
+      .catch((error) => {
         console.log(error);
         this.setState({
-          isFetching: false
+          isFetching: false,
         });
       });
   }

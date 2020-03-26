@@ -5,12 +5,10 @@ import Content from "react-bulma-components/lib/components/content";
 import Heading from "react-bulma-components/lib/components/heading";
 
 function formatDate(date) {
-  return moment(date)
-    .tz("Asia/Jakarta")
-    .format("MMM YYYY");
+  return moment(date).tz("Asia/Jakarta").format("MMM YYYY");
 }
 
-const EmploymentSection = props => {
+const EmploymentSection = (props) => {
   return (
     <>
       <Columns gapless>
