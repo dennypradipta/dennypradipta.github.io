@@ -8,12 +8,12 @@ function formatDate(date) {
   return moment(date).tz("Asia/Jakarta").format("YYYY");
 }
 
-const EducationSection = (props) => {
+const EducationSection = props => {
   return (
     <>
       <Columns gapless>
         {!props.isFetching
-          ? props.educations.map((education) => {
+          ? props.educations.map(education => {
               return (
                 <Columns.Column size={12} key={education.sys.id}>
                   <Content className="global-padding">
@@ -23,9 +23,11 @@ const EducationSection = (props) => {
                     <Heading
                       subtitle
                       size={6}
+                      style={{ marginLeft: "2rem" }}
                       className="has-text-left has-text-white"
                     >
                       {education.fields.major}
+                      <br />
                       <span className="has-text-weight-normal has-text-white">{`${formatDate(
                         education.fields.startDate
                       )} - ${formatDate(education.fields.endDate)}`}</span>
