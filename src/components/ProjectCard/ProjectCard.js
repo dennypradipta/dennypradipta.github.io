@@ -32,7 +32,7 @@ const ProjectCard = (props) => {
               </a>
             </Heading>
             <p className="has-text-left">{props.data.fields.description}</p>
-            <Columns className="is-centered">
+            <Columns className="is-centered is-flex-mobile is-tablet-block">
               {props.data.fields.technologies.map((technology) => {
                 return (
                   <TechnologyIcon technology={technology} key={technology} />
