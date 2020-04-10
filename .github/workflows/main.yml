@@ -34,5 +34,5 @@ jobs:
     - name: Check build
       run: npm run build
       env:
-        - REACT_APP_BASE_URL: ${{ secrets.REACT_APP_BASE_URL }}
-        - REACT_APP_CONTENTFUL_ACCESS_TOKEN: ${{ secrets.REACT_APP_CONTENTFUL_ACCESS_TOKEN }}
+        REACT_APP_BASE_URL: ${{ secrets.REACT_APP_BASE_URL }}
+        REACT_APP_CONTENTFUL_ACCESS_TOKEN: ${{ secrets.REACT_APP_CONTENTFUL_ACCESS_TOKEN }}
