@@ -38,7 +38,7 @@ jobs:
         REACT_APP_CONTENTFUL_ACCESS_TOKEN: ${{ secrets.REACT_APP_CONTENTFUL_ACCESS_TOKEN }}
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
-        with:
-          ACCESS_TOKEN: ${{ secrets.PAT_GHPAGES }}
-          BRANCH: master
-          FOLDER: build
+      with:
+        ACCESS_TOKEN: ${{ secrets.PAT_GHPAGES }}
+        BRANCH: master
+        FOLDER: build
